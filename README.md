@@ -9,11 +9,17 @@ Screen Shot of the app UI
 ![Home_Automation_App_UI](https://user-images.githubusercontent.com/90062803/153727112-8a379917-0aa8-4d6e-95e1-0e3adbbddaec.png)
 
 
+## App UI Video
+
+https://user-images.githubusercontent.com/90062803/153728534-778e1f40-30cb-4bb5-b59a-aac5ac487d5f.mp4
+
 ## Getting Started
 
 This project is The Exact UI I got from Behance.
 
 - [App UI Behance](https://www.behance.net/gallery/124433659/Home-automation-app-ui/)
+
+
 
 
 
