@@ -1,4 +1,4 @@
-# home_automation_app_ui
+# Home Automation App UI
 
 A new Flutter UI project.
 
