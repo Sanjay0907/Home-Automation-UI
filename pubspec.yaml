@@ -40,6 +40,9 @@ dependencies:
   # slider_button: ^2.0.0
   shimmer: ^2.0.0
   vibration: ^1.7.4-nullsafety.0
+  badges: ^2.0.2
+  slide_button: ^0.2.9
+  sizer: ^2.0.15
 
 dev_dependencies:
   flutter_test:

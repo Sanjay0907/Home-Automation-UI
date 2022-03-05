@@ -1,6 +1,9 @@
+// ignore_for_file: file_names, camel_case_types, use_key_in_widget_constructors, avoid_print
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:shimmer/shimmer.dart';
+import 'package:sizer/sizer.dart';
 import 'package:vibration/vibration.dart';
 
 class HomePage_SliderButton extends StatefulWidget {
@@ -110,13 +113,13 @@ class _HomePage_SliderButtonState extends State<HomePage_SliderButton> {
                       highlightColor: Colors.white,
                       period: const Duration(seconds: 2),
                       child: SizedBox(
-                        width: 100,
+                        width: 25.w,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: const [
                             FaIcon(
                               FontAwesomeIcons.angleRight,
-                              size: 30,
+                              // size: 30,
                               color: Color.fromARGB(255, 209, 206, 206),
                             ),
                             FaIcon(
@@ -203,7 +206,6 @@ class _HomePage_SliderButtonState extends State<HomePage_SliderButton> {
                     },
                     child: Container(
                       width: widget.width - widget.height,
-                      
                       alignment: Alignment.centerLeft,
                       padding: EdgeInsets.only(
                         left: (widget.height -
@@ -226,11 +228,11 @@ class _HomePage_SliderButtonState extends State<HomePage_SliderButton> {
                                 ),
                                 borderRadius:
                                     BorderRadius.circular(widget.radius)),
-                            child: const Center(
+                            child: Center(
                               child: Text(
                                 "Start",
                                 style: TextStyle(
-                                    fontSize: 35,
+                                    fontSize: 4.h,
                                     fontWeight: FontWeight.w600,
                                     color: Colors.black),
                               ),

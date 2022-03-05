@@ -43,11 +43,16 @@ class _Gate1LockSliderButtonState extends State<Gate1LockSliderButton> {
               )),
         ],
       ),
-      Positioned(bottom: 0, right: 0,child: Lock_Slider(action: () {
-        setState(() {
-          gate_1_is_lock = !gate_1_is_lock;
-        });
-      }))
+      Positioned(
+          bottom: 0,
+          right: 0,
+          child: Lock_Slider(action: () {
+            setState(() {
+              gate_1_is_lock = !gate_1_is_lock;
+
+              print('Gate 1 Status = $gate_1_is_lock');
+            });
+          }))
     ]);
   }
 }

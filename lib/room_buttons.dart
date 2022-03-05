@@ -1,6 +1,9 @@
+// ignore_for_file: camel_case_types, unused_import
+
 import 'package:flutter/material.dart';
 import 'package:home_automation_app_ui/constant.dart';
 import 'package:home_automation_app_ui/pages/studio_light.dart';
+import 'package:sizer/sizer.dart';
 
 class Room_Buttons extends StatefulWidget {
   const Room_Buttons({Key? key}) : super(key: key);
@@ -36,24 +39,24 @@ class _Room_ButtonsState extends State<Room_Buttons> {
               borderRadius: BorderRadius.circular(50),
               border: Border.all(
                 color: in_living_room
-                    ? Color.fromARGB(255, 247, 203, 71)
-                    : Color.fromARGB(255, 78, 77, 77),
+                    ? const Color.fromARGB(255, 247, 203, 71)
+                    : const Color.fromARGB(255, 78, 77, 77),
                 width: 1,
               ),
             ),
-            height: 32,
-            width: 120,
+            // height: 2.h,
+            width: 30.w,
             child: Center(
               child: Text(
                 "Living Room",
                 style: in_living_room
-                    ? const TextStyle(
+                    ? TextStyle(
                         fontWeight: FontWeight.w500,
-                        fontSize: 15,
+                        fontSize: 1.8.h,
                         color: Colors.white)
-                    : const TextStyle(
+                    : TextStyle(
                         color: Color.fromARGB(255, 109, 108, 108),
-                        fontSize: 15,
+                        fontSize: 1.8.h,
                       ),
               ),
             ),
@@ -78,24 +81,24 @@ class _Room_ButtonsState extends State<Room_Buttons> {
               borderRadius: BorderRadius.circular(50),
               border: Border.all(
                 color: in_kitchen
-                    ? Color.fromARGB(255, 247, 203, 71)
-                    : Color.fromARGB(255, 78, 77, 77),
+                    ? const Color.fromARGB(255, 247, 203, 71)
+                    : const Color.fromARGB(255, 78, 77, 77),
                 width: 1,
               ),
             ),
             height: 32,
-            width: 120,
+            width: 30.w,
             child: Center(
               child: Text(
                 "Kitchen",
                 style: in_kitchen
-                    ? const TextStyle(
+                    ? TextStyle(
                         fontWeight: FontWeight.w500,
-                        fontSize: 15,
+                        fontSize: 1.8.h,
                         color: Colors.white)
-                    : const TextStyle(
+                    : TextStyle(
                         color: Color.fromARGB(255, 109, 108, 108),
-                        fontSize: 15,
+                        fontSize: 1.8.h,
                       ),
               ),
             ),
@@ -120,24 +123,24 @@ class _Room_ButtonsState extends State<Room_Buttons> {
               borderRadius: BorderRadius.circular(50),
               border: Border.all(
                 color: in_bedroom
-                    ? Color.fromARGB(255, 247, 203, 71)
-                    : Color.fromARGB(255, 78, 77, 77),
+                    ? const Color.fromARGB(255, 247, 203, 71)
+                    : const Color.fromARGB(255, 78, 77, 77),
                 width: 1,
               ),
             ),
             height: 32,
-            width: 120,
+            width: 30.w,
             child: Center(
               child: Text(
                 "Bedroom",
                 style: in_bedroom
-                    ? const TextStyle(
+                    ? TextStyle(
                         fontWeight: FontWeight.w500,
-                        fontSize: 15,
+                        fontSize: 1.8.h,
                         color: Colors.white)
-                    : const TextStyle(
+                    : TextStyle(
                         color: Color.fromARGB(255, 109, 108, 108),
-                        fontSize: 15,
+                        fontSize: 1.8.h,
                       ),
               ),
             ),
@@ -162,24 +165,24 @@ class _Room_ButtonsState extends State<Room_Buttons> {
               borderRadius: BorderRadius.circular(50),
               border: Border.all(
                 color: in_bathroom
-                    ? Color.fromARGB(255, 247, 203, 71)
-                    : Color.fromARGB(255, 78, 77, 77),
+                    ? const Color.fromARGB(255, 247, 203, 71)
+                    : const Color.fromARGB(255, 78, 77, 77),
                 width: 1,
               ),
             ),
             height: 32,
-            width: 120,
+            width: 30.w,
             child: Center(
               child: Text(
                 "Bathroom",
                 style: in_bathroom
-                    ? const TextStyle(
+                    ? TextStyle(
                         fontWeight: FontWeight.w500,
-                        fontSize: 15,
+                        fontSize: 1.8.h,
                         color: Colors.white)
-                    : const TextStyle(
+                    : TextStyle(
                         color: Color.fromARGB(255, 109, 108, 108),
-                        fontSize: 15,
+                        fontSize: 1.8.h,
                       ),
               ),
             ),
@@ -204,24 +207,24 @@ class _Room_ButtonsState extends State<Room_Buttons> {
               borderRadius: BorderRadius.circular(50),
               border: Border.all(
                 color: in_dining
-                    ? Color.fromARGB(255, 247, 203, 71)
-                    : Color.fromARGB(255, 78, 77, 77),
+                    ? const Color.fromARGB(255, 247, 203, 71)
+                    : const Color.fromARGB(255, 78, 77, 77),
                 width: 1,
               ),
             ),
             height: 32,
-            width: 120,
+            width: 30.w,
             child: Center(
               child: Text(
                 "Dining",
                 style: in_dining
-                    ? const TextStyle(
+                    ? TextStyle(
                         fontWeight: FontWeight.w500,
-                        fontSize: 15,
+                        fontSize: 1.8.h,
                         color: Colors.white)
-                    : const TextStyle(
+                    : TextStyle(
                         color: Color.fromARGB(255, 109, 108, 108),
-                        fontSize: 15,
+                        fontSize: 1.8.h,
                       ),
               ),
             ),
