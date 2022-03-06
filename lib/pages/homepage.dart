@@ -1,3 +1,6 @@
+// ignore_for_file: non_constant_identifier_names, camel_case_types
+
+import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:home_automation_app_ui/constant.dart';
@@ -10,11 +13,14 @@ import 'package:home_automation_app_ui/slider/lock_slider_button.dart';
 import 'package:home_automation_app_ui/slider/unlock_slider.dart';
 import 'package:home_automation_app_ui/slider/unlock_slider_button.dart';
 import 'package:home_automation_app_ui/pages/studio_light.dart';
+import 'package:sizer/sizer.dart';
 
 // import 'living_room_items.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  bool gt1_lock = true;
+  bool gt2_lock = false;
+  // const HomePage({Key? key}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -37,8 +43,8 @@ class _HomePageState extends State<HomePage> {
                   Stack(
                     children: [
                       SizedBox(
-                        width: MediaQuery.of(context).size.width,
-                        height: 50,
+                        width: 100.w,
+                        height: 6.h,
                         child: const Image(
                           image: AssetImage(
                             "assets/images/home_automation__logo.png",
@@ -49,8 +55,12 @@ class _HomePageState extends State<HomePage> {
                         right: 0,
                         bottom: 5,
                         child: GestureDetector(
-                          onTap: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => const Studio_Light()));
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const Studio_Light()));
                           },
                           child: Container(
                             decoration: BoxDecoration(
@@ -61,15 +71,15 @@ class _HomePageState extends State<HomePage> {
                                 width: 1.5,
                               ),
                             ),
-                            height: 35,
-                            width: 35,
+                            height: 4.5.h,
+                            width: 4.5.h,
                             // color: Colors.white,
-                        
-                            child: const Center(
+
+                            child: Center(
                               child: FaIcon(
                                 FontAwesomeIcons.plus,
                                 color: Colors.white,
-                                size: 18,
+                                size: 2.5.h,
                               ),
                             ),
                           ),
@@ -77,20 +87,20 @@ class _HomePageState extends State<HomePage> {
                       )
                     ],
                   ),
-                  const SizedBox(
-                    height: 30,
+                  SizedBox(
+                    height: 3.h,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
+                        children: [
                           Text(
                             "Hello",
                             style: TextStyle(
-                              color: Color.fromARGB(255, 104, 98, 98),
-                              fontSize: 30,
+                              color: const Color.fromARGB(255, 104, 98, 98),
+                              fontSize: 3.7.h,
                               fontWeight: FontWeight.w300,
                             ),
                           ),
@@ -98,7 +108,7 @@ class _HomePageState extends State<HomePage> {
                             "Moritz",
                             style: TextStyle(
                               fontWeight: FontWeight.w700,
-                              fontSize: 50,
+                              fontSize: 6.h,
                               color: Colors.white,
                             ),
                           )
@@ -106,54 +116,48 @@ class _HomePageState extends State<HomePage> {
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.end,
-                        children: const [
-                          Image(
+                        children: [
+                          const Image(
                             image: AssetImage("assets/images/cloud_sun.png"),
                           ),
                           Text(
                             "16°C · NewYork",
                             style: TextStyle(
-                              color: Color.fromARGB(255, 87, 86, 86),
-                              fontSize: 16,
+                              color: const Color.fromARGB(255, 87, 86, 86),
+                              fontSize: 2.h,
                             ),
                           )
                         ],
                       )
                     ],
                   ),
-                  const SizedBox(
-                    height: 10,
+                  SizedBox(
+                    height: 1.1.h,
                   ),
                   SizedBox(
-                    height: 45,
+                    height: 5.6.h,
                     child: ScrollConfiguration(
                         behavior: NoGlowScrollBehavior(),
-                        // child: ListView.builder(
-                        //   // physics: const NeverScrollableScrollPhysics(),
-                        //   scrollDirection: Axis.horizontal,
-                        //   itemCount: rooms.length,
-                        //   itemBuilder: (context, index) => room(rooms[index]),
-                        // ),
                         child: const Room_Buttons()),
                   ),
-                  const SizedBox(
-                    height: 20,
+                  SizedBox(
+                    height: 2.h,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
-                        height: MediaQuery.of(context).size.width / 3.2,
-                        width: MediaQuery.of(context).size.width / 2.3,
+                        height: 16.2.h,
+                        width: 44.w,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
                           gradient: LinearGradient(
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
-                            colors: !gate_1_is_lock
+                            colors: !gate_2_is_lock
                                 ? [
                                     Colors.amber,
-                                    Color.fromARGB(255, 85, 84, 84),
+                                    const Color.fromARGB(255, 85, 84, 84),
                                     Colors.black,
                                   ]
                                 : [Colors.grey, Colors.black, Colors.black],
@@ -192,28 +196,36 @@ class _HomePageState extends State<HomePage> {
                                                   255, 104, 101, 101))),
                                     ]),
                               ),
-                              !gate_1_is_lock
+                              !gate_2_is_lock
                                   ? const Gate1LockSliderButton()
                                   : const Gate1UnlockSliderButton(),
+                              // if (gate_1_is_lock == true)
+                              //   const Gate1LockSliderButton(),
+                              // if (gate_1_is_lock != true)
+                              //   const Gate1UnlockSliderButton(),
                             ],
                           ),
                         ),
                       ),
                       Container(
-                        height: MediaQuery.of(context).size.width / 3.2,
-                        width: MediaQuery.of(context).size.width / 2.3,
+                        height: 16.2.h,
+                        width: 44.w,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
                           gradient: LinearGradient(
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
-                            colors: gate_2_is_lock
+                            colors: gate_1_is_lock
                                 ? [
                                     Colors.amber,
-                                    Color.fromARGB(255, 85, 84, 84),
+                                    const Color.fromARGB(255, 85, 84, 84),
                                     Colors.black,
                                   ]
-                                : [Colors.grey, Color.fromARGB(255, 92, 91, 91), Colors.black],
+                                : [
+                                    Colors.grey,
+                                    const Color.fromARGB(255, 92, 91, 91),
+                                    Colors.black
+                                  ],
                           ),
                         ),
                         child: Container(
@@ -249,7 +261,7 @@ class _HomePageState extends State<HomePage> {
                                                   255, 104, 101, 101))),
                                     ]),
                               ),
-                              gate_2_is_lock
+                              gate_1_is_lock
                                   ? const Gate1LockSliderButton()
                                   : const Gate1UnlockSliderButton(),
                             ],
@@ -258,8 +270,8 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    height: 10,
+                  SizedBox(
+                    height: 1.h,
                   ),
                   const Living_Room_Items(),
 
@@ -271,7 +283,7 @@ class _HomePageState extends State<HomePage> {
           Positioned(
             bottom: 0,
             child: SizedBox(
-              height: 90,
+              height: 11.h,
               width: MediaQuery.of(context).size.width,
               child: CustomPaint(
                 size: Size(
@@ -295,7 +307,7 @@ class _HomePageState extends State<HomePage> {
                         icon: FaIcon(
                           FontAwesomeIcons.home,
                           color: in_home ? Colors.amber : Colors.white,
-                          size: 30,
+                          size: 3.6.h,
                         ),
                       ),
                       IconButton(
@@ -310,11 +322,11 @@ class _HomePageState extends State<HomePage> {
                         icon: FaIcon(
                           FontAwesomeIcons.gripHorizontal,
                           color: grid_view ? Colors.amber : Colors.white,
-                          size: 30,
+                          size: 3.6.h,
                         ),
                       ),
-                      IconButton(
-                        onPressed: () {
+                      GestureDetector(
+                        onTap: () {
                           setState(() {
                             settings = false;
                             in_home = false;
@@ -322,10 +334,20 @@ class _HomePageState extends State<HomePage> {
                             notification = true;
                           });
                         },
-                        icon: FaIcon(
-                          FontAwesomeIcons.bell,
-                          color: notification ? Colors.amber : Colors.white,
-                          size: 30,
+                        child: Badge(
+                          badgeColor: Colors.amber,
+                          position: BadgePosition.topStart(),
+                          badgeContent: const Text(
+                            "2",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.w700),
+                          ),
+                          child: FaIcon(
+                            FontAwesomeIcons.bell,
+                            color: notification ? Colors.amber : Colors.white,
+                            size: 3.6.h,
+                          ),
                         ),
                       ),
                       IconButton(
@@ -340,7 +362,7 @@ class _HomePageState extends State<HomePage> {
                         icon: Icon(
                           Icons.settings,
                           color: settings ? Colors.amber : Colors.white,
-                          size: 35,
+                          size: 3.8.h,
                         ),
                       ),
                     ],
@@ -406,13 +428,13 @@ class _room_objectsState extends State<room_objects> {
           colors: !gate_2_is_lock
               ? [
                   Colors.amber,
-                  Color.fromARGB(255, 78, 78, 78),
-                  Color.fromARGB(255, 41, 41, 41),
+                  const Color.fromARGB(255, 78, 78, 78),
+                  const Color.fromARGB(255, 41, 41, 41),
                 ]
               : [
-                  Color.fromARGB(255, 85, 84, 84),
-                  Color.fromARGB(255, 34, 33, 33),
-                  Color.fromARGB(255, 24, 24, 24)
+                  const Color.fromARGB(255, 85, 84, 84),
+                  const Color.fromARGB(255, 34, 33, 33),
+                  const Color.fromARGB(255, 24, 24, 24)
                 ],
         ),
         borderRadius: BorderRadius.circular(20),
@@ -458,7 +480,7 @@ class _room_objectsState extends State<room_objects> {
                     ),
                   ],
                 ),
-                Text(
+                const Text(
                   "05:25 · Latte",
                   style: TextStyle(
                       color: Colors.white,
@@ -472,19 +494,19 @@ class _room_objectsState extends State<room_objects> {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Container(
-                  margin: EdgeInsets.symmetric(vertical: 10),
+                  margin: const EdgeInsets.symmetric(vertical: 10),
                   child: Row(
                     children: [
                       Container(
-                        margin: EdgeInsets.only(right: 3),
+                        margin: const EdgeInsets.only(right: 3),
                         height: 10,
                         width: 10,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           shape: BoxShape.circle,
                           color: Colors.amber,
                         ),
                       ),
-                      Text(
+                      const Text(
                         "ON",
                         style: TextStyle(
                             fontSize: 13,
@@ -494,14 +516,14 @@ class _room_objectsState extends State<room_objects> {
                     ],
                   ),
                 ),
-                Text(
+                const Text(
                   "23°",
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 16,
                       fontWeight: FontWeight.w600),
                 ),
-                FaIcon(
+                const FaIcon(
                   FontAwesomeIcons.angleRight,
                   color: Colors.grey,
                 ),
