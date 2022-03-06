@@ -143,133 +143,133 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(
                     height: 2.h,
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Container(
-                        height: 16.2.h,
-                        width: 44.w,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          gradient: LinearGradient(
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
-                            colors: !gate_2_is_lock
-                                ? [
-                                    Colors.amber,
-                                    const Color.fromARGB(255, 85, 84, 84),
-                                    Colors.black,
-                                  ]
-                                : [Colors.grey, Colors.black, Colors.black],
-                          ),
-                        ),
-                        child: Container(
-                          margin: const EdgeInsets.all(1),
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 5, vertical: 7),
-                          height: (MediaQuery.of(context).size.width / 3) - 5,
-                          width: (MediaQuery.of(context).size.width / 2.3) - 5,
-                          decoration: BoxDecoration(
-                            color: Colors.black,
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                margin: const EdgeInsets.only(left: 10),
-                                child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: const [
-                                      Text(
-                                        "Gate 2",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 30,
-                                            fontWeight: FontWeight.w600),
-                                      ),
-                                      Text("Unlocked",
-                                          style: TextStyle(
-                                              color: Color.fromARGB(
-                                                  255, 104, 101, 101))),
-                                    ]),
-                              ),
-                              !gate_2_is_lock
-                                  ? const Gate1LockSliderButton()
-                                  : const Gate1UnlockSliderButton(),
-                              // if (gate_1_is_lock == true)
-                              //   const Gate1LockSliderButton(),
-                              // if (gate_1_is_lock != true)
-                              //   const Gate1UnlockSliderButton(),
-                            ],
-                          ),
-                        ),
-                      ),
-                      Container(
-                        height: 16.2.h,
-                        width: 44.w,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          gradient: LinearGradient(
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
-                            colors: gate_1_is_lock
-                                ? [
-                                    Colors.amber,
-                                    const Color.fromARGB(255, 85, 84, 84),
-                                    Colors.black,
-                                  ]
-                                : [
-                                    Colors.grey,
-                                    const Color.fromARGB(255, 92, 91, 91),
-                                    Colors.black
-                                  ],
-                          ),
-                        ),
-                        child: Container(
-                          margin: const EdgeInsets.all(1),
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 5, vertical: 7),
-                          height: (MediaQuery.of(context).size.width / 3) - 5,
-                          width: (MediaQuery.of(context).size.width / 2.3) - 5,
-                          decoration: BoxDecoration(
-                            color: Colors.black,
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                margin: const EdgeInsets.only(left: 10),
-                                child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: const [
-                                      Text(
-                                        "Gate 1",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 30,
-                                            fontWeight: FontWeight.w600),
-                                      ),
-                                      Text("Unlocked",
-                                          style: TextStyle(
-                                              color: Color.fromARGB(
-                                                  255, 104, 101, 101))),
-                                    ]),
-                              ),
-                              gate_1_is_lock
-                                  ? const Gate1LockSliderButton()
-                                  : const Gate1UnlockSliderButton(),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                  // Row(
+                  //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  //   children: [
+                  //     Container(
+                  //       height: 16.2.h,
+                  //       width: 44.w,
+                  //       decoration: BoxDecoration(
+                  //         borderRadius: BorderRadius.circular(20),
+                  //         gradient: LinearGradient(
+                  //           begin: Alignment.topLeft,
+                  //           end: Alignment.bottomRight,
+                  //           colors: !gate_2_is_lock
+                  //               ? [
+                  //                   Colors.amber,
+                  //                   const Color.fromARGB(255, 85, 84, 84),
+                  //                   Colors.black,
+                  //                 ]
+                  //               : [Colors.grey, Colors.black, Colors.black],
+                  //         ),
+                  //       ),
+                  //       child: Container(
+                  //         margin: const EdgeInsets.all(1),
+                  //         padding: const EdgeInsets.symmetric(
+                  //             horizontal: 5, vertical: 7),
+                  //         height: (MediaQuery.of(context).size.width / 3) - 5,
+                  //         width: (MediaQuery.of(context).size.width / 2.3) - 5,
+                  //         decoration: BoxDecoration(
+                  //           color: Colors.black,
+                  //           borderRadius: BorderRadius.circular(20),
+                  //         ),
+                  //         child: Column(
+                  //           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  //           crossAxisAlignment: CrossAxisAlignment.start,
+                  //           children: [
+                  //             Container(
+                  //               margin: const EdgeInsets.only(left: 10),
+                  //               child: Column(
+                  //                   crossAxisAlignment:
+                  //                       CrossAxisAlignment.start,
+                  //                   children: const [
+                  //                     Text(
+                  //                       "Gate 2",
+                  //                       style: TextStyle(
+                  //                           color: Colors.white,
+                  //                           fontSize: 30,
+                  //                           fontWeight: FontWeight.w600),
+                  //                     ),
+                  //                     Text("Unlocked",
+                  //                         style: TextStyle(
+                  //                             color: Color.fromARGB(
+                  //                                 255, 104, 101, 101))),
+                  //                   ]),
+                  //             ),
+                  //             !gate_2_is_lock
+                  //                 ? const Gate1LockSliderButton()
+                  //                 : const Gate1UnlockSliderButton(),
+                  //             // if (gate_1_is_lock == true)
+                  //             //   const Gate1LockSliderButton(),
+                  //             // if (gate_1_is_lock != true)
+                  //             //   const Gate1UnlockSliderButton(),
+                  //           ],
+                  //         ),
+                  //       ),
+                  //     ),
+                  //     Container(
+                  //       height: 16.2.h,
+                  //       width: 44.w,
+                  //       decoration: BoxDecoration(
+                  //         borderRadius: BorderRadius.circular(20),
+                  //         gradient: LinearGradient(
+                  //           begin: Alignment.topLeft,
+                  //           end: Alignment.bottomRight,
+                  //           colors: gate_1_is_lock
+                  //               ? [
+                  //                   Colors.amber,
+                  //                   const Color.fromARGB(255, 85, 84, 84),
+                  //                   Colors.black,
+                  //                 ]
+                  //               : [
+                  //                   Colors.grey,
+                  //                   const Color.fromARGB(255, 92, 91, 91),
+                  //                   Colors.black
+                  //                 ],
+                  //         ),
+                  //       ),
+                  //       child: Container(
+                  //         margin: const EdgeInsets.all(1),
+                  //         padding: const EdgeInsets.symmetric(
+                  //             horizontal: 5, vertical: 7),
+                  //         height: (MediaQuery.of(context).size.width / 3) - 5,
+                  //         width: (MediaQuery.of(context).size.width / 2.3) - 5,
+                  //         decoration: BoxDecoration(
+                  //           color: Colors.black,
+                  //           borderRadius: BorderRadius.circular(20),
+                  //         ),
+                  //         child: Column(
+                  //           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  //           crossAxisAlignment: CrossAxisAlignment.start,
+                  //           children: [
+                  //             Container(
+                  //               margin: const EdgeInsets.only(left: 10),
+                  //               child: Column(
+                  //                   crossAxisAlignment:
+                  //                       CrossAxisAlignment.start,
+                  //                   children: const [
+                  //                     Text(
+                  //                       "Gate 1",
+                  //                       style: TextStyle(
+                  //                           color: Colors.white,
+                  //                           fontSize: 30,
+                  //                           fontWeight: FontWeight.w600),
+                  //                     ),
+                  //                     Text("Unlocked",
+                  //                         style: TextStyle(
+                  //                             color: Color.fromARGB(
+                  //                                 255, 104, 101, 101))),
+                  //                   ]),
+                  //             ),
+                  //             gate_1_is_lock
+                  //                 ? const Gate1LockSliderButton()
+                  //                 : const Gate1UnlockSliderButton(),
+                  //           ],
+                  //         ),
+                  //       ),
+                  //     ),
+                  //   ],
+                  // ),
                   SizedBox(
                     height: 1.h,
                   ),
